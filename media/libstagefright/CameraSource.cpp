@@ -1267,8 +1267,8 @@ void CameraSource::processBufferQueueFrame(BufferItem& buffer) {
     mFrameAvailableCondition.signal();
 }
 
-MetadataBufferType CameraSource::metaDataStoredInVideoBuffers() const {
-    ALOGV("metaDataStoredInVideoBuffers");
+bool CameraSource::isMetaDataStoredInVideoBuffers() const {
+    ALOGV("isMetaDataStoredInVideoBuffers");
 
     // Output buffers will contain metadata if camera sends us buffer in metadata mode or via
     // buffer queue.
